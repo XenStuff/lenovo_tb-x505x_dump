@@ -1,0 +1,35 @@
+service vendor.fingerprint /vendor/bin/fingerprint
+	class core
+    user system
+    group system
+    oneshot
+
+on property:vendor.build.fingerprint=1
+    setprop ro.vendor.build.fingerprint ${ro.vendor.build.fingerprint_eea}
+    setprop ro.odm.build.fingerprint ${ro.vendor.build.fingerprint_eea}
+    setprop ro.product.vendor.name ${ro.product.vendor.device}_EEA
+    setprop ro.product.name ${ro.product.vendor.name}
+    setprop ro.product.system.name ${ro.product.vendor.name}
+    setprop ro.product.odm.name ${ro.product.vendor.name}
+
+on property:vendor.build.fingerprint=2
+    setprop ro.vendor.build.fingerprint ${ro.vendor.build.fingerprint_ru}
+    setprop ro.odm.build.fingerprint ${ro.vendor.build.fingerprint_ru}
+    setprop ro.product.vendor.name ${ro.product.vendor.device}_RU
+    setprop ro.product.name ${ro.product.vendor.name}
+    setprop ro.product.system.name ${ro.product.vendor.name}
+    setprop ro.product.odm.name ${ro.product.vendor.name}
+
+on property:vendor.build.fingerprint=0
+    setprop ro.vendor.build.fingerprint ${ro.vendor.build.fingerprint_normal}
+    setprop ro.odm.build.fingerprint ${ro.vendor.build.fingerprint_normal}
+    setprop ro.product.vendor.name ${ro.product.vendor.device}
+    setprop ro.product.name ${ro.product.vendor.name}
+    setprop ro.product.system.name ${ro.product.vendor.name}
+    setprop ro.product.odm.name ${ro.product.vendor.name}
+
+on property:vendor.build.series=0
+    setprop ro.lenovo.series "Lenovo Tab M10"
+
+on property:vendor.build.series=1
+    setprop ro.lenovo.series "Lenovo Tab B10"

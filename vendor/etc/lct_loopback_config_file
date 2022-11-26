@@ -1,0 +1,141 @@
+tc 1
+#Headset-mic to Speaker Channel-L AFE loopback
+!AfeLoop
+Txdevice:11
+Rxdevice:5
+
+enable
+ADC2 Volume:1
+DEC1 MUX:ADC2
+ADC2 MUX:INP2
+IIR1 INP1 MUX:DEC1
+
+RX1 MIX1 INP1:RX1
+RX1 Digital Volume:77
+SPK_REC Switch:SPKL
+HPHL:Switch
+
+PRI_MI2S_RX Port Mixer TERT_MI2S_TX:1
+
+disable
+PRI_MI2S_RX Port Mixer TERT_MI2S_TX:0
+
+ADC2 Volume:1
+DEC1 MUX:ZERO
+ADC2 MUX:ZERO
+IIR1 INP1 MUX:ZERO
+
+RX1 MIX1 INP1:ZERO
+RX1 Digital Volume:84
+SPK_REC Switch:Off
+HPHL:ZERO
+
+
+
+
+tc 2
+#Headset-mic to Speaker Channel-R AFE loopback
+!AfeLoop
+Txdevice:11
+Rxdevice:5
+
+enable
+ADC2 Volume:1
+DEC1 MUX:ADC2
+MICBIAS CAPLESS Switch:1
+ADC2 MUX:INP2
+IIR1 INP1 MUX:DEC1
+
+RX2 MIX1 INP1:RX2
+SPK_REC Switch:SPKR
+RDAC2 MUX:RX2
+RX2 Digital Volume:77
+HPHR:Switch
+
+
+PRI_MI2S_RX Port Mixer TERT_MI2S_TX:1
+
+disable
+PRI_MI2S_RX Port Mixer TERT_MI2S_TX:0
+
+ADC2 Volume:1
+DEC1 MUX:ZERO
+MICBIAS CAPLESS Switch:0
+ADC2 MUX:ZERO
+IIR1 INP1 MUX:ZERO
+
+RX2 MIX1 INP1:ZERO
+SPK_REC Switch:Off
+RDAC2 MUX:ZERO
+RX2 Digital Volume:84
+HPHR::ZERO
+
+tc 3
+#Headset-mic to Receiver AFE loopback
+!AfeLoop
+Txdevice:11
+Rxdevice:5
+
+enable
+ADC2 Volume:5
+DEC1 MUX:ADC2
+MICBIAS CAPLESS Switch:1
+ADC2 MUX:INP2
+IIR1 INP1 MUX:DEC1
+
+RX1 MIX1 INP1:RX1
+HPHL:Switch
+SPK_REC Switch:REC
+RX1 Digital Volume:77
+
+PRI_MI2S_RX Port Mixer TERT_MI2S_TX:1
+
+disable
+PRI_MI2S_RX Port Mixer TERT_MI2S_TX:0
+
+ADC2 Volume:4
+DEC1 MUX:ZERO
+MICBIAS CAPLESS Switch:0
+ADC2 MUX:ZERO
+IIR1 INP1 MUX:ZERO
+
+RX1 MIX1 INP1:ZERO
+HPHL:ZERO
+SPK_REC Switch:Off
+RX1 Digital Volume:84
+
+tc 4
+#Handset-mic to Headset Dual-Channel AFE loopback
+!AfeLoop
+Txdevice:11
+Rxdevice:5
+
+enable
+IIR1 INP1 MUX:DEC1
+ADC1 Volume:6
+DEC1 MUX:ADC1
+ADC1_INP1 Switch:1
+
+MI2S_RX Channels:Two
+RX1 MIX1 INP1:RX1
+RX2 MIX1 INP1:RX2
+RDAC2 MUX:RX2
+HPHL:Switch
+HPHR:Switch
+
+PRI_MI2S_RX Port Mixer TERT_MI2S_TX:1
+
+disable
+PRI_MI2S_RX Port Mixer TERT_MI2S_TX:0
+
+ADC1_INP1 Switch:0
+DEC1 MUX:ZERO
+ADC1 Volume:4
+IIR1 INP1 MUX:ZERO
+
+MI2S_RX Channels:One
+RX1 MIX1 INP1:ZERO
+RX2 MIX1 INP1:ZERO
+RDAC2 MUX:ZERO
+HPHL:ZERO
+HPHR:ZERO

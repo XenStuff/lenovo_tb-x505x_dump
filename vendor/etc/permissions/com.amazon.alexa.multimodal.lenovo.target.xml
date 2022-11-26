@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Add for Lenovo tablet's HA2.0 Feature
+-->
+
+<!-- Feature for devices with an accelerometer sensor. -->
+<permissions>
+    <feature name="com.amazon.alexa.multimodal.lenovo.target" />
+</permissions>

@@ -1,0 +1,10 @@
+com.microsoft.office.outlook
+ru.yandex.searchplugin
+com.yandex.browser
+com.amazon.mp3
+com.machsystem.cwbygo2
+com.machsystem.gawii
+com.guardian.security.pri.lenovo
+com.swifthawk.picku.free.lenovo
+tw.com.parenting.storytime
+com.tblenovo.lenovoruapps
