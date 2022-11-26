@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <testkeytype item_name="KEY_POWER" item_value="yes" item_keycode="26" item_left="400" item_top="100" item_right="50" item_bottom="0"/>
+    <testkeytype item_name="KEY_VOLUME_UP" item_value="yes"  item_keycode="24" item_left="670" item_top="100" item_right="0" item_bottom="0"/>
+    <testkeytype item_name="KEY_VOLUME_DOWN" item_value="yes" item_keycode="25" item_left="550" item_top="100" item_right="0" item_bottom="0"/>
+    <!-- <testkeytype item_name="KEY_HOME" item_value="yes" item_keycode="3" item_left="550" item_top="1600" item_right="0" item_bottom="20"/> -->
+    <!-- <testkeytype item_name="KEY_MENU" item_value="yes" item_keycode="187" item_left="850" item_top="1600" item_right="80" item_bottom="20"/> -->
+    <!-- <testkeytype item_name="KEY_BACK" item_value="yes" item_keycode="4" item_left="200" item_top="1600" item_right="0" item_bottom="20"/> -->
+</resources>

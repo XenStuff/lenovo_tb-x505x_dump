@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <testitem item_name="sim_status_test_uim" item_action="SimStatusCheck" />
+    <testitem item_name="front_camera" item_action="FrontTestCamera" >
+        <config config_name="pre_orientation" config_value="90"/>
+        <!--<config config_name="pre_height" config_value="720"/> -->
+        <!--<config config_name="pre_width" config_value="1280"/> -->
+    </testitem>
+    <testitem item_name="back_camera" item_action="BackCameraAutoFocus" >
+        <config config_name="back_orientation" config_value="90"/>
+        <config config_name="back_height" config_value="1080"/>
+        <config config_name="back_width" config_value="1920"/>
+    </testitem>
+    <testitem item_name="qrcode_test" item_action="QRCode" > 
+        <config config_name="qrc_orientation" config_value="90"/>
+    </testitem>
+    <testitem item_name="earphone_test" item_action="AmericanEarphone" />
+    <testitem item_name="FM" item_action="Fm" />
+    <testitem item_name="backlight_keypadlight_test" item_action="BacklightKeypadLight" />
+    <testitem item_name="lcd_motor" item_action="Lcd6ColorMotor" >
+        <!-- note : color value is only RGB , image value is only absolut path -->
+        <color_item type="color" value="#FF0000"/>
+        <color_item type="image" value="/system/etc/onedot_port.png"/>
+        <color_item type="color" value="#0000FF"/>
+        <color_item type="color" value="#00FF00"/>
+        <color_item type="color" value="#FFFFFF"/>
+        <color_item type="color" value="#000000"/>
+        <color_item type="color" value="#444444"/>
+    </testitem>
+    <testitem item_name="keyboard" item_action="MidtestKeyboard" />
+    <testitem item_name="audio_speaker_right" item_action="AutoSpeakerRight" />
+    <testitem item_name="mic1test" item_action="Mic1Loopback" >
+        <config config_name="mic_key" config_value="record_select_mic"/>
+        <config config_name="mic_value" config_value="handset-mic"/>
+        <config config_name="mic_limit" config_value="29"/>
+    </testitem>
+    <testitem item_name="audio_speaker_left" item_action="AutoSpeakerLeft" />
+    <testitem item_name="ledtest" item_action="LedFlashTest" >
+        <config config_name="leditems" config_value="green{/sys/class/leds/green/brightness};red{/sys/class/leds/red/brightness}"/>
+    </testitem>
+    <testitem item_name="touchpanel_test" item_action="Touchpanel_v2" >
+        <config config_name="v2_typec_test" config_value="false"/>
+        <config config_name="v2_diagonal_line_r" config_value="85"/>
+        <config config_name="v2grid_col_num" config_value="13"/>
+        <config config_name="v2grid_row_num" config_value="13"/>
+    </testitem> 
+    <testitem item_name="tp_autotest_title" item_action="TouchpanelAutoTest1" />
+   <testitem item_name="multipoint_test" item_action="MultiPoint" />
+    <!-- <testitem item_name="battery_temperature" item_action="BatteryTemperature" /> -->
+    <testitem item_name="charge_test" item_action="ChargeVoltage">
+        <charge_voltage_current item_key="voltage" item_value="/sys/class/power_supply/battery/voltage_now" />
+        <charge_voltage_current item_key="current" item_value="/sys/class/power_supply/battery/current_now" />
+        <charge_voltage_current item_key="voltageUnit" item_value="μV" />
+        <charge_voltage_current item_key="currentUnit" item_value="μA" />
+    </testitem>
+    <testitem item_name="accelerator_test" item_action="Acce_jz">
+        <!-- acctype is calibration method,value is framework,jni,bin -->
+        <accelerator_test config_name="accetype" config_value="jni" />
+        <accelerator_test config_name="testAcce" config_value="true"/>
+        <accelerator_test config_name="testgyro" config_value="false"/>
+        <!--acce calibration data clear or not -->
+        <accelerator_test config_name="acceclear" config_value="false"/>
+    </testitem>
+    <testitem item_name="OTG" item_action="OtgP5200" />
+    <testitem item_name="HallSensor" item_action="HallSensor">
+        <config config_name="key_hall_open" config_value="290"/>
+        <config config_name="key_hall_close" config_value="291"/>
+    </testitem> 
+    <testitem item_name="SarSensor" item_action="CapSensorP3590">
+        <config config_name="key_cap_ts0" config_value="294"/>
+        <config config_name="key_cap_ts1" config_value="295"/>
+        <config config_name="key_cap_rs0" config_value="296"/>
+        <config config_name="key_cap_rs1" config_value="297"/>
+    </testitem>
+    <testitem item_name="test_pogo" item_action="PoGoCheckTest" />
+    <testitem item_name="gps_test" item_action="Gps" />
+    <testitem item_name="bluetooth" item_action="Bluetooth" />
+    <testitem item_name="wifi_test" item_action="Wifi" />
+    <testitem item_name="SDCard" item_action="TCard" />
+</resources>

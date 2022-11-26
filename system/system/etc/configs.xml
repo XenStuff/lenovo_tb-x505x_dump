@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- set the Screen Orientation, portrait or landscape.the default is portrait -->
+    <config config_name="screenOrientation" config_value="portrait" />
+    <!-- if reboot test true,then show Reboot in combile activity -->
+    <config config_name="reboot_test" config_value="true" />
+    <!-- if wifi_only true,the call test disable.param: true or false. -->
+    <config config_name="wifi_only" config_value="false" />
+    <!-- Use this parameter to determine which bin file to use for #*2008# wifi send.version: 2(iwpriv),3(myftm). -->
+    <config config_name="wifi_version" config_value="2" />
+    <!-- the max test item count    -->
+    <config config_name="count" config_value="40" />
+    <!-- 1 means dual camera     0 means single camera-->
+    <config config_name="isDualCamera" config_value="0" />
+    <!-- the node for get the tp version ,default is : /proc/tp_info-->
+    <config config_name="tppath" config_value="/proc/tp_info"/> 
+    <!-- the node for get lcd moudle version -->
+    <config config_name="lcdpath" config_value="/sys/class/graphics/fb0/msm_fb_panel_info"/>
+    <!-- the node for get the sub tp version ,just for Multiple TP project-->
+    <config config_name="sublcdpath" config_value="/sys/class/graphics/fb1/msm_fb_panel_info"/>
+    <!-- the node for get emmc moudle  -->
+    <config config_name="emmcfile" config_value="/sys/bus/mmc/devices/mmc0:0001/version"/>
+    <!-- the node for get camera moudle  -->
+    <config config_name="cam_moudel" config_value="/sys/android_camera/sensor"/>
+    <!-- the node for get the fingerPrint version -->
+    <config config_name="fppath" config_value="/proc/fp_info"/>
+    <!-- the node for get efuse state,default is NULL -->
+    <config config_name="efuse" config_value="/proc/fuse_state"/>
+    <!-- the node for get hardware version -->
+    <config config_name="platformver" config_value="/sys/devices/system/soc/soc0/platform_version"/>
+    <!-- the node for get battery  -->
+    <config config_name="batterytype" config_value="/sys/class/power_supply/bms/uevent"/>
+    <!-- if set this parameter,the BarCode will show in version activity -->
+    <config config_name="barcode" config_value="barcode"/>
+    <!-- The command for emr upgrade -->
+    <!--<config config_name="emr_upgrade" config_value="shell command"/>-->
+    <!--<config config_name="emr_fw" config_value="shell command"/>-->
+    <!-- The command for get emr  -->
+    <!--<config config_name="emrcmd" config_value="shell command"/> -->
+
+    <!-- Mobile network system,if has CDMA,then the MEID will show-->
+    <config config_name="network" config_value="WCDMA;TDD-LTE;GSM;TD-SCDMA;LTEFDD;"/> 
+    <!--sim card num ,if value is 2,then show IMEI1 and IMEI2 -->
+    <config config_name="sim_num" config_value="1"/>
+
+    <!--sn_from_oeminfo. value:1(oeminfo),2(system property),3(NV) -->
+    <config config_name="sn_from_oeminfo" config_value="3"/>
+    <!-- whichtype of get nv from. value:1(LctDiagSendData),2(LctReadWriteNv),3(QcrilHook) -->
+    <config config_name="nv_deal" config_value="3"/>
+    <config config_name="id_cmd" config_value="156"/>
+
+</resources>
